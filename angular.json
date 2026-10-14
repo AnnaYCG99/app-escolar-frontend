@@ -27,10 +27,24 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
               }
-            ],
+              ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap-utilities.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "node_modules/material-symbols/outlined.css",
               "src/styles.scss"
+             ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -93,11 +107,23 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap-utilities.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "node_modules/material-symbols/outlined.css",
               "src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "0aa1741d-ea82-4aa7-b8e6-7c09bff022bd"
   }
 }
