@@ -1,7 +1,15 @@
 import { Routes } from '@angular/router';
-import { LoginScreen } from './screens/login-screen/login-screen';
 
 export const routes: Routes = [
-  { path: '', component: LoginScreen, pathMatch: 'full' },
-  { path: 'login', component: LoginScreen },
+
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  {
+    path: 'login',
+    loadComponent: () => import('./screens/login-screen/login-screen').then(m => m.LoginScreen)
+  },
+  {
+    path: 'registro-usuarios',
+    loadComponent: () => import('./screens/registro-usuarios-screen/registro-usuarios-screen').then(m => m.RegistroUsuariosScreen)
+  }
+
 ];
